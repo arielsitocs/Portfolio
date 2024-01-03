@@ -1,9 +1,9 @@
 ---
 import "../styles/index.css";
 import fotoAriel from "../img/fotoAriel.png";
-import Contacto from "../components/contact.astro"
-import contacto1 from "../img/github.png"
-import contacto2 from "../img/linkedin.png"
+import Contacto from "../components/contact.astro";
+import contacto1 from "../img/github.png";
+import contacto2 from "../img/linkedin.png";
 ---
 
 <!doctype html>
@@ -22,8 +22,8 @@ import contacto2 from "../img/linkedin.png"
 				</div>
 				<div class="links">
 					<a href="#inicio">INICIO</a>
-					<a href="">SOBRE MÍ</a>
-					<a href="">CONOCIMIENTO</a>
+					<a href="#sobre">SOBRE MÍ</a>
+					<a href="#conocimiento">CONOCIMIENTO</a>
 					<a href="">PROYECTOS</a>
 					<a href="">CONTACTO</a>
 				</div>
@@ -34,18 +34,58 @@ import contacto2 from "../img/linkedin.png"
 					<div class="pres_left">
 						<img src={fotoAriel.src} alt="" />
 						<h1>Desarrollador <span>FullStack</span>.</h1>
-						<button>Conoceme más</button>
+						<button id="know">Conoceme más</button>
 					</div>
 					<div class="pres_right">
-						<h1>"Ayudando a convertir tus ideas, en una realidad."</h1>
-						<hr>
+						<h1>
+							"Ayudando a convertir tus ideas, en una realidad."
+						</h1>
+						<hr />
 						<div class="pres_contacts">
-							<Contacto link="https://github.com/arielsitocs" icon={contacto1.src} name="GitHub"/>
-							<Contacto link="https://www.linkedin.com/in/ariel-escobar/" icon={contacto2.src} name="LinkedIn"/>
+							<Contacto
+								link="https://github.com/arielsitocs"
+								icon={contacto1.src}
+								name="GitHub"
+							/>
+							<Contacto
+								link="https://www.linkedin.com/in/ariel-escobar/"
+								icon={contacto2.src}
+								name="LinkedIn"
+							/>
 						</div>
 					</div>
 				</div>
 			</section>
+
+			<section id="sobre">
+				<div class="about">
+					<div class="about_title">
+					<h1>Sobre <span>Mí</span></h1>
+					
+				</div>
+					<div class="about_text">
+						<p>Apasionado por <strong>solucionar</strong>, <strong>crear</strong> e <strong>innovar</strong>. Debido a que siempre me ha atraido la tecnología, 
+							me he adentrado en el mundo del desarrollo de manera formal desde el año 2022. Centrandome mayormente
+							en el área del <strong>desarrollo Web</strong> y el <strong>desarrollo de Software</strong>. 
+						</p>
+						<br>
+						<p>
+							Actualmente curso la carrera de <strong>ingeniería informática</strong>, para poder incrementar mis conocimientos, además
+							de complementar con <strong>estudios en casa</strong>, haciendo <strong>cursos</strong> y <strong>creando proyectos</strong> para adquirir experiencia en lo
+							que más me gusta.
+						</p>
+						<br>
+						<p>
+							A lo largo de mi experiencia he podido experimentar <strong>muchos retos</strong>, como la <strong>creación de proyectos</strong> y el aprendizaje
+							de <strong>nuevas tecnologías</strong> que pueden suponer un reto para mí. Planeo seguir con estas actividades durante toda mi carrera.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="conocimiento"></section>
+
+			<section id="proyectos"></section>
 		</main>
 	</body>
 </html>

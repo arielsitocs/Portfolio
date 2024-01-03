@@ -1,5 +1,12 @@
 ---
-const {link, icon, name} = Astro.props;
+interface Props
+{
+    link: string;
+    icon: any;
+    name: string;
+}
+
+const {link, icon = "Missing Icon!", name = "Missing Name!"} = Astro.props;
 ---
 
 <div class="contact">
@@ -22,18 +29,27 @@ const {link, icon, name} = Astro.props;
         border: none;
         width: 100%;
         max-width: 100%;
-        transition: transform 0.4s ease, margin-bottom 0.4s ease;
+        transition: transform 0.4s ease, margin-bottom 0.4s ease, background 0.4s ease;
     }
 
     .contact img:hover
     {
         transform: scale(1.2);
         cursor: pointer;
+        background-color: orange;
     }
 
     .contact h3 
     {
         font-family: 'Lexend Deca', sans-serif;
         font-size: 1vw;
+    }
+
+    @media (max-width: 768px)
+    {
+        .contact h3 
+        {
+            font-size: 2.2vw;
+        }
     }
 </style>
