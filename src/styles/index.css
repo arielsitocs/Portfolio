@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&family=Lexend+Deca:wght@300&family=Roboto+Mono:wght@200&family=Rubik&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVBAR */
+
+.nav_bar 
+{
+    width: 100%;
+    min-height: 10vh;
+    /* background-color: rgba(0, 0, 0, 0.103); */
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: fixed;
+    /* border: 1px solid black; */
+}
+
+.perfil
+{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin-left: 0.5%;
+}
+
+.perfil img 
+{
+    width: 10%;
+    border-radius: 100px;
+    border: 2px solid orange;
+}
+
+.perfil h1
+{
+    margin-left: 1%;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.5vw;
+    color: rgb(0, 0, 0);
+}
+
+.perfil span 
+{
+    color: orange;
+}
+
+.links 
+{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.links a 
+{
+    text-decoration: none;
+    margin: 2%;
+    color: rgb(0, 0, 0);
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.2vw;
+    transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.links a:hover
+{
+    color: orange;
+    transform: scale(1.15);
+    text-decoration: underline;
+}
+
+/* INICIO */
+
+#inicio 
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: bl;
+}
+
+.presentacion
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pres
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pres_left
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    min-height: fit-content;
+}
+
+.presentacion img
+{
+    width: 30%;
+    border-radius: 150px;
+    margin-bottom: 1%;
+    border: 4px solid orange;
+}
+
+.presentacion h1
+{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 2vw;
+}
+
+.presentacion span
+{
+    color: orange;
+}
+
+.presentacion button 
+{
+    background-color: black;
+    color: white;
+    margin-top: 4%;
+    width: 40%;
+    height: 6vh;
+    border-radius: 100px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.3vw;
+    border: 1px solid black;
+    transition: background 0.4s ease, border 0.4s ease;
+}
+
+.presentacion button:hover
+{
+    background: orange;
+    border: 1px solid orange;
+    cursor: pointer;
+}
+
+.pres_right
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    min-height: fit-content;
+    flex-direction: column;
+}
+.pres_right h1 
+{
+    font-size: 1.6vw;
+}
+
+.pres_right hr
+{
+    width: 50%;
+    height: 0.5vh;
+    background-color: orange;
+    border: 1px solid orange;
+    margin-top: 2%;
+    border-radius: 100px;
+}
+
+.pres_contacts
+{
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px)
+{
+    
+}
+
+

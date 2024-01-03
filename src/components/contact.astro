@@ -1,0 +1,39 @@
+---
+const {link, icon, name} = Astro.props;
+---
+
+<div class="contact">
+    <a href={link}><img src={icon}></a>
+    <h3>{name}</h3>
+</div>
+
+<style>
+    .contact
+    {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 50px;
+        margin: 20%;
+    }
+
+    .contact img 
+    {
+        border: none;
+        width: 100%;
+        max-width: 100%;
+        transition: transform 0.4s ease, margin-bottom 0.4s ease;
+    }
+
+    .contact img:hover
+    {
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+
+    .contact h3 
+    {
+        font-family: 'Lexend Deca', sans-serif;
+        font-size: 1vw;
+    }
+</style>

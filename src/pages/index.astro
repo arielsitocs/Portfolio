@@ -1,0 +1,51 @@
+---
+import "../styles/index.css";
+import fotoAriel from "../img/fotoAriel.png";
+import Contacto from "../components/contact.astro"
+import contacto1 from "../img/github.png"
+import contacto2 from "../img/linkedin.png"
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ariel Escobar</title>
+	</head>
+	<body>
+		<main class="main_content">
+			<nav class="nav_bar">
+				<div class="perfil">
+					<img src={fotoAriel.src} alt="" />
+					<h1><span>A</span>riel <span>E</span>scobar</h1>
+				</div>
+				<div class="links">
+					<a href="#inicio">INICIO</a>
+					<a href="">SOBRE MÍ</a>
+					<a href="">CONOCIMIENTO</a>
+					<a href="">PROYECTOS</a>
+					<a href="">CONTACTO</a>
+				</div>
+			</nav>
+
+			<section id="inicio">
+				<div class="presentacion">
+					<div class="pres_left">
+						<img src={fotoAriel.src} alt="" />
+						<h1>Desarrollador <span>FullStack</span>.</h1>
+						<button>Conoceme más</button>
+					</div>
+					<div class="pres_right">
+						<h1>"Ayudando a convertir tus ideas, en una realidad."</h1>
+						<hr>
+						<div class="pres_contacts">
+							<Contacto link="https://github.com/arielsitocs" icon={contacto1.src} name="GitHub"/>
+							<Contacto link="https://www.linkedin.com/in/ariel-escobar/" icon={contacto2.src} name="LinkedIn"/>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
