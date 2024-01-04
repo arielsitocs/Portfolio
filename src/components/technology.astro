@@ -1,0 +1,99 @@
+---
+interface Props 
+{
+    imagen: any;
+    titulo: string;
+    descripcion: string;
+}
+
+const {imagen, titulo, descripcion} = Astro.props;
+import "../styles/tec_font.css"
+---
+
+<div class="tecnologia">
+    <div class="imagen">
+        <img src={imagen}+.src>
+    </div>
+
+    <div class="texto">
+        <h2>{titulo}</h2>
+        <p>{descripcion}</p>
+    </div>
+</div>
+
+<style>
+
+    *:hover 
+    {
+        cursor: default;
+    }
+
+    .tecnologia
+    {
+        width: 25%;
+        background-color: rgba(212, 212, 212, 0.185);
+        border: 1px solid black;
+        /* box-shadow: 4px 4px black; */
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        margin: 3%;
+        transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+    }
+
+    .tecnologia:hover
+    {
+        background-color: rgba(255, 166, 0, 0.26);
+        border: 1px solid white;
+        /* color: white; */
+    }
+
+    .imagen
+    {
+        width: 25%;
+        height: 25%;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imagen img 
+    {
+        width: 100%;
+        border-radius: 100px;
+
+    }
+
+    .texto
+    {
+        margin-left: 4%;
+    }
+
+    .texto h2 
+    {
+        font-size: 1.6vw;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .texto p
+    {
+        font-size: 1.2vw;
+        font-family: 'Rajdhani', sans-serif;
+    }
+
+    .high
+    {
+        color: rgb(1, 145, 1);
+    }
+
+    .medium
+    {
+        color: yellow;
+    }
+
+    .low
+    {
+        color: red;
+    }
+</style>
