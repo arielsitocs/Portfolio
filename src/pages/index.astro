@@ -6,6 +6,15 @@ import Tecnologia from "../components/technology.astro";
 import contacto1 from "../img/github.png";
 import contacto2 from "../img/linkedin.png";
 import Default from "../img/default.png";
+import js from "../img/js.png"
+import ts from "../img/typescript.png"
+import py from "../img/piton.png"
+import cplus from "../img/default.png"
+import csharp from "../img/c-.png"
+import java from "../img/java.png"
+import astro from "../img/astro.png"
+import net from "../img/.net.png"
+import ionic from "../img/ionic.png"
 ---
 
 <!doctype html>
@@ -26,15 +35,18 @@ import Default from "../img/default.png";
 					<a href="#inicio">INICIO</a>
 					<a href="#sobre">SOBRE MÍ</a>
 					<a href="#conocimiento">CONOCIMIENTO</a>
-					<a href="">PROYECTOS</a>
-					<a href="">CONTACTO</a>
+					<a href="#proyectos">PROYECTOS</a>
+					<a href="#contacto">CONTACTO</a>
+				</div>
+				<div class="mode">
+					
 				</div>
 			</nav>
 
 			<section id="inicio">
 				<div class="presentacion">
 					<div class="pres_left">
-						<img src={fotoAriel.src} alt="" />
+						<img src={fotoAriel.src}/>
 						<h1>Desarrollador <span>FullStack</span>.</h1>
 						<button>Conoceme más</button>
 						<button>Descargar CV</button>
@@ -106,54 +118,60 @@ import Default from "../img/default.png";
 
 				<div class="tecnologias">
 					<Tecnologia
-						imagen={Default.src}
+						imagen={js.src}
 						titulo="JAVASCRIPT"
 						descripcion="Alto"
 					/>
 					<Tecnologia
-						imagen={Default.src}
-						titulo="JAVA"
+						imagen={ts.src}
+						titulo="TYPESCRIPT"
 						descripcion="Medio"
 					/>
 					<Tecnologia
-						imagen={Default.src}
+						imagen={py.src}
 						titulo="PYTHON"
 						descripcion="Alto"
 					/>
 					<Tecnologia
-						imagen={Default.src}
+						imagen={cplus.src}
 						titulo="C++"
 						descripcion="Medio"
 					/>
 					<Tecnologia
-						imagen={Default.src}
+						imagen={csharp.src}
 						titulo="C#"
 						descripcion="Medio"
 					/>
 					<Tecnologia
-						imagen={Default.src}
-						titulo="PHP"
-						descripcion="Bajo"
+						imagen={java.src}
+						titulo="JAVA"
+						descripcion="Alto"
 					/>
 					<Tecnologia
-						imagen={Default.src}
+						imagen={astro.src}
 						titulo="ASTRO"
 						descripcion="Alto"
 					/>
 					<Tecnologia
-						imagen={Default.src}
+						imagen={net.src}
 						titulo=".NET"
 						descripcion="Medio"
 					/>
 					<Tecnologia
-						imagen={Default.src}
+						imagen={ionic.src}
 						titulo="IONIC"
 						descripcion="Bajo/Medio"
 					/>
 				</div>
 			</section>
 
-			<section id="proyectos"></section>
+			<section id="proyectos">
+
+			</section>
+
+			<section id="contacto">
+
+			</section>
 		</main>
 	</body>
 </html>

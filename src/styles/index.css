@@ -1,74 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&family=Lexend+Deca:wght@300&family=Rajdhani&family=Roboto+Mono:wght@200&family=Rubik&display=swap');
 
-*
-{
+* {
     margin: 0;
     padding: 0;
 }
 
-html
-{
+html {
     scroll-behavior: smooth;
 }
 
-section
-{
+section {
     border-bottom: 3px solid rgba(0, 0, 0, 0.205);
 }
 
 /* NAVBAR */
 
-.nav_bar 
-{
+.nav_bar {
     width: 100%;
     min-height: 10vh;
-    background-color: rgba(179, 179, 179, 0.164);
+    background-color: rgba(179, 179, 179, 0.238);
     display: flex;
     align-items: center;
     padding-bottom: 10px;
     padding-top: 10px;
     position: fixed;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(1px);
     /* border: px solid black; */
 }
 
-.perfil
-{
+.perfil {
     display: flex;
     align-items: center;
     width: 50%;
     margin-left: 0.5%;
 }
 
-.perfil img 
-{
+.perfil img {
     width: 10%;
     border-radius: 100px;
     border: 2px solid orange;
 }
 
-.perfil h1
-{
+.perfil h1 {
     margin-left: 1%;
     font-family: 'Lexend Deca', sans-serif;
     font-size: 1.5vw;
     color: rgb(0, 0, 0);
 }
 
-.perfil span 
-{
+.perfil span {
     color: orange;
 }
 
-.links 
-{
+.links {
     display: flex;
     align-items: center;
     width: 50%;
 }
 
-.links a 
-{
+.links a {
     text-decoration: none;
     margin: 2%;
     color: rgb(0, 0, 0);
@@ -77,8 +67,7 @@ section
     transition: color 0.4s ease, transform 0.4s ease;
 }
 
-.links a:hover
-{
+.links a:hover {
     color: orange;
     transform: scale(1.15);
     text-decoration: underline;
@@ -86,8 +75,7 @@ section
 
 /* INICIO */
 
-#inicio 
-{
+#inicio {
     width: 100%;
     height: 100vh;
     max-height: 100vh;
@@ -97,22 +85,19 @@ section
     background-color: bl;
 }
 
-.presentacion
-{
+.presentacion {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.pres
-{
+.pres {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.pres_left
-{
+.pres_left {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,27 +106,23 @@ section
     min-height: fit-content;
 }
 
-.presentacion img
-{
+.presentacion img {
     width: 30%;
     border-radius: 150px;
     margin-bottom: 1%;
     border: 4px solid orange;
 }
 
-.presentacion h1
-{
+.presentacion h1 {
     font-family: 'Lexend Deca', sans-serif;
     font-size: 2vw;
 }
 
-.presentacion span
-{
+.presentacion span {
     color: orange;
 }
 
-.presentacion button 
-{
+.presentacion button {
     background-color: black;
     color: white;
     margin-top: 4%;
@@ -154,15 +135,13 @@ section
     transition: background 0.4s ease, border 0.4s ease;
 }
 
-.presentacion button:hover
-{
+.presentacion button:hover {
     background: orange;
     border: 1px solid orange;
     cursor: pointer;
 }
 
-.pres_right
-{
+.pres_right {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -170,13 +149,12 @@ section
     min-height: fit-content;
     flex-direction: column;
 }
-.pres_right h1 
-{
+
+.pres_right h1 {
     font-size: 1.6vw;
 }
 
-.pres_right hr
-{
+.pres_right hr {
     width: 50%;
     height: 0.5vh;
     background-color: orange;
@@ -185,35 +163,29 @@ section
     border-radius: 100px;
 }
 
-.pres_contacts
-{
+.pres_contacts {
     margin-top: 3%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-@media (max-width: 768px)
-{
-    .pres_left img 
-    {
+@media (max-width: 768px) {
+    .pres_left img {
         width: 55%;
     }
 
-    .pres_left h1
-    {
+    .pres_left h1 {
         font-size: 4vw;
     }
 
-    .pres_left button 
-    {
+    .pres_left button {
         width: 70%;
         height: 4vh;
         font-size: 3vw;
     }
 
-    .pres_right h1
-    {
+    .pres_right h1 {
         font-size: 3vw;
         text-align: center;
         margin-bottom: 3%;
@@ -222,8 +194,7 @@ section
 
 /* SOBRE MÍ */
 
-#sobre
-{
+#sobre {
     width: 100%;
     height: 100vh;
     max-height: 100vh;
@@ -232,22 +203,20 @@ section
     align-items: center;
 }
 
-.about
-{
+.about {
     width: 80%;
     height: 80%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    /* background-color: rgba(105, 105, 105, 0.144); */
-    border: 3px solid orange;
+    background-color: rgb(0, 0, 0);
+    border: 4px solid orange;
     /* box-shadow: 7px 7px orange; */
     border-radius: 30px;
 }
 
-.about_title
-{
+.about_title {
     width: 30%;
     padding: 10px;
     background-color: orange;
@@ -258,16 +227,14 @@ section
     border-radius: 10px;
 }
 
-.about h1
-{
+.about h1 {
     font-size: 2.3vw;
     font-family: 'Lexend Deca', sans-serif;
     color: rgb(255, 255, 255);
     margin-bottom: 0.5%;
 }
 
-.about hr 
-{
+.about hr {
     width: 20%;
     height: 0.2vh;
     background-color: rgb(0, 0, 0);
@@ -275,21 +242,37 @@ section
     border-radius: 100px;
 }
 
-.about_text
-{
+.about_text {
     width: 80%;
 }
 
-.about_text p 
-{
+.about_text p {
     font-size: 1.5vw;
     font-family: 'Rajdhani', sans-serif;
+    color: white;
+}
+
+.about_text strong {
+    color: orange;
+}
+
+@media (max-width: 768px) {
+    .about_title {
+        width: 55%;
+    }
+
+    .about h1 {
+        font-size: 4vw;
+    }
+
+    .about_text p {
+        font-size: 3.3vw;
+    }
 }
 
 /* CONOCIMIENTO */
 
-#conocimiento
-{
+#conocimiento {
     width: 100%;
     height: 100vh;
     max-height: 100vh;
@@ -299,8 +282,7 @@ section
     flex-direction: column;
 }
 
-.skills_title
-{
+.skills_title {
     width: 25%;
     padding: 10px;
     background-color: orange;
@@ -312,15 +294,13 @@ section
     margin-bottom: 1%;
 }
 
-.skills_title h1
-{
+.skills_title h1 {
     font-size: 2.3vw;
     font-family: 'Lexend Deca', sans-serif;
     color: rgb(255, 255, 255);
 }
 
-.tecnologias 
-{
+.tecnologias {
     width: 80%;
     height: fit-content;
     display: flex;
@@ -328,5 +308,34 @@ section
     justify-content: center;
 }
 
+@media (max-width: 768px) {
+    .skills_title {
+        width: 60%;
+        margin-bottom: 7%;
+    }
 
+    .skills_title h1 {
+        font-size: 4vw;
+    }
 
+    .tecnologias {
+        width: 100%;
+        height: 50%;
+    }
+}
+
+/* PROYECTOS */ 
+
+#proyectos {
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+}
+
+/* CONTACTO */
+
+#contacto {
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+}

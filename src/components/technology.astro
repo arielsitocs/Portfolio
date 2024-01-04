@@ -1,18 +1,17 @@
 ---
-interface Props 
-{
+interface Props {
     imagen: any;
     titulo: string;
     descripcion: string;
 }
 
-const {imagen, titulo, descripcion} = Astro.props;
-import "../styles/tec_font.css"
+const { imagen, titulo, descripcion } = Astro.props;
+import "../styles/tec_font.css";
 ---
 
 <div class="tecnologia">
     <div class="imagen">
-        <img src={imagen}+.src>
+        <img src={imagen} +.src />
     </div>
 
     <div class="texto">
@@ -22,34 +21,49 @@ import "../styles/tec_font.css"
 </div>
 
 <style>
-
-    *:hover 
-    {
+    *:hover {
         cursor: default;
     }
 
-    .tecnologia
-    {
+    .tecnologia {
         width: 25%;
-        background-color: rgba(212, 212, 212, 0.185);
-        border: 1px solid black;
-        /* box-shadow: 4px 4px black; */
+        background-color: rgb(0, 0, 0);
+        border: 2px solid rgb(0, 0, 0);
+        box-shadow: 3px 3px orange;
         border-radius: 20px;
         display: flex;
         align-items: center;
         margin: 3%;
-        transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+        transition:
+            background 0.3s ease,
+            color 0.3s ease,
+            border 0.3s ease,
+            box-shadow 0.3s ease
     }
 
-    .tecnologia:hover
-    {
-        background-color: rgba(255, 166, 0, 0.26);
-        border: 1px solid white;
-        /* color: white; */
+    .tecnologia:hover {
+        background-color: orange;
+        border: 2px solid orange;
+        box-shadow: 3px 3px black;
     }
 
-    .imagen
-    {
+    .tecnologia .texto h2 {
+        transition: color 0.3s ease;
+    }
+
+    .tecnologia .texto p {
+        transition: color 0.3s ease;
+    }
+
+    .tecnologia:hover .texto h2 {
+        color: black;
+    }
+
+    .tecnologia:hover .texto p {
+        color: rgb(255, 255, 255);
+    }
+
+    .imagen {
         width: 25%;
         height: 25%;
         padding: 5px;
@@ -58,42 +72,48 @@ import "../styles/tec_font.css"
         align-items: center;
     }
 
-    .imagen img 
-    {
+    .imagen img {
         width: 100%;
-        border-radius: 100px;
-
+        border-radius: 20px;
     }
 
-    .texto
-    {
+    .texto {
         margin-left: 4%;
     }
 
-    .texto h2 
-    {
+    .texto h2 {
         font-size: 1.6vw;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+            "Lucida Sans", Arial, sans-serif;
+        color: white;
     }
 
-    .texto p
-    {
+    .texto p {
         font-size: 1.2vw;
-        font-family: 'Rajdhani', sans-serif;
+        font-family: "Rajdhani", sans-serif;
+        color: orange;
     }
 
-    .high
-    {
-        color: rgb(1, 145, 1);
-    }
+    @media (max-width: 768px) {
+        .tecnologia {
+            padding: 2px;
+        }
 
-    .medium
-    {
-        color: yellow;
-    }
+        .imagen {
+            width: 40%;
+            height: 40%;
+        }
 
-    .low
-    {
-        color: red;
+        .imagen img {
+            border-radius: 6px;
+        }
+
+        .texto h2 {
+            font-size: 2vw;
+        }
+
+        .texto p {
+            font-size: 2.7vw;
+        }
     }
 </style>
