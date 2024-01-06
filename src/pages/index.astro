@@ -3,18 +3,19 @@ import "../styles/index.css";
 import fotoAriel from "../img/fotoAriel.png";
 import Contacto from "../components/contact.astro";
 import Tecnologia from "../components/technology.astro";
+import Proyecto from "../components/proyect.astro";
 import contacto1 from "../img/github.png";
 import contacto2 from "../img/linkedin.png";
 import Default from "../img/default.png";
-import js from "../img/js.png"
-import ts from "../img/typescript.png"
-import py from "../img/piton.png"
-import cplus from "../img/default.png"
-import csharp from "../img/c-.png"
-import java from "../img/java.png"
-import astro from "../img/astro.png"
-import net from "../img/.net.png"
-import ionic from "../img/ionic.png"
+import js from "../img/js.png";
+import ts from "../img/typescript.png";
+import py from "../img/piton.png";
+import cplus from "../img/default.png";
+import csharp from "../img/c-.png";
+import java from "../img/java.png";
+import astro from "../img/astro.png";
+import net from "../img/.net.png";
+import ionic from "../img/ionic.png";
 ---
 
 <!doctype html>
@@ -34,19 +35,17 @@ import ionic from "../img/ionic.png"
 				<div class="links">
 					<a href="#inicio">INICIO</a>
 					<a href="#sobre">SOBRE MÍ</a>
-					<a href="#conocimiento">CONOCIMIENTO</a>
+					<a href="#conocimiento">HABILIDADES</a>
 					<a href="#proyectos">PROYECTOS</a>
 					<a href="#contacto">CONTACTO</a>
 				</div>
-				<div class="mode">
-					
-				</div>
+				<div class="mode"></div>
 			</nav>
 
 			<section id="inicio">
 				<div class="presentacion">
 					<div class="pres_left">
-						<img src={fotoAriel.src}/>
+						<img src={fotoAriel.src} />
 						<h1>Desarrollador <span>FullStack</span>.</h1>
 						<button>Conoceme más</button>
 						<button>Descargar CV</button>
@@ -166,12 +165,43 @@ import ionic from "../img/ionic.png"
 			</section>
 
 			<section id="proyectos">
-
+				<div class="proyectos_container">
+					<Proyecto
+						imagen={Default.src}
+						titulo="Portafolio"
+						descripcion="Un proyecto más personal, para darme a conocer y poder mostrar mi experiencia y habilidades."
+						tecnologias={["HTML", "CSS", "JS", "ASTRO"]}
+						github={""}
+						link={""}
+					/>
+					<Proyecto
+						imagen={Default.src}
+						titulo="Cacluladora"
+						descripcion="Un proyecto más personal, para darme a conocer y poder mostrar mi experiencia y habilidades."
+						tecnologias={["HTML", "CSS", "JS", "ASTRO"]}
+						github={""}
+						link={""}
+					/>
+					<Proyecto
+						imagen={Default.src}
+						titulo="Tienda"
+						descripcion="Un proyecto más personal, para darme a conocer y poder mostrar mi experiencia y habilidades."
+						tecnologias={["HTML", "CSS", "JS", "ASTRO"]}
+						github={""}
+						link={""}
+					/>
+					<Proyecto
+					imagen={Default.src}
+					titulo="Cajero Automático"
+					descripcion="Un proyecto más personal, para darme a conocer y poder mostrar mi experiencia y habilidades."
+					tecnologias={["HTML", "CSS", "JS", "ASTRO"]}
+					github={""}
+					link={""}
+				/>						
+				</div>
 			</section>
 
-			<section id="contacto">
-
-			</section>
+			<section id="contacto"></section>
 		</main>
 	</body>
 </html>

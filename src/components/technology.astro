@@ -6,7 +6,7 @@ interface Props {
 }
 
 const { imagen, titulo, descripcion } = Astro.props;
-import "../styles/tec_font.css";
+import "../styles/font.css";
 ---
 
 <div class="tecnologia">
@@ -16,7 +16,7 @@ import "../styles/tec_font.css";
 
     <div class="texto">
         <h2>{titulo}</h2>
-        <p>{descripcion}</p>
+        <p><strong>{descripcion}</strong></p>
     </div>
 </div>
 

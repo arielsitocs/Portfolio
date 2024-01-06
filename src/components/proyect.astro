@@ -1,0 +1,162 @@
+---
+interface Props {
+    imagen: any;
+    titulo: string;
+    descripcion: string;
+    tecnologias: string[];
+    github: any;
+    link: any;
+}
+
+const { imagen, titulo, descripcion, tecnologias, github, link } = Astro.props;
+
+import "../styles/font.css";
+import GitHub from "../img/github.png";
+import Enlace from "../img/enlace.png";
+---
+
+<div class="proyecto">
+    <div class="proyecto_imagen">
+        <img src={imagen} alt="" />
+    </div>
+
+    <div class="proyecto_content">
+        <div class="proyecto_top">
+            <div class="proyecto_title">
+                <h1><strong>{titulo}</strong></h1>
+            </div>
+            <div class="proyecto_links">
+                <a href={github}><img src={GitHub.src} /></a>
+                <a href={link}><img src={Enlace.src} /></a>
+            </div>
+        </div>
+
+        <div class="proyecto_description">
+            <h3>{descripcion}</h3>
+        </div>
+
+        <div class="proyecto_tecnologies">
+            {
+                tecnologias.map((tecnologia) => (
+                    <div class="tecnologia">
+                        <h1>{tecnologia}</h1>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</div>
+
+<style>
+    .proyecto {
+        width: 45%;
+        height: 25%;
+        background-color: rgb(0, 0, 0);
+        border-radius: 20px;
+        display: flex;
+        border: 3px solid orange;
+        margin: 1%;
+    }
+
+    .proyecto_content {
+        width: 100%;
+        margin-left: 1.5%;
+        margin-top: 1.5%;
+    }
+
+    .proyecto_top
+    {
+        display: flex;
+        align-items: center;
+        margin-bottom: 3%;
+    }
+
+    .proyecto_title {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .proyecto_title h1 {
+        font-size: 1.7vw;
+        font-family: "Lexend Deca", sans-serif;
+        color: orange;
+    }
+
+    .proyecto_links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        height: 100%;
+    }
+
+    .proyecto_links a {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: rgb(104, 119, 255);
+        justify-content: center;
+        /* margin-left: 5%; */
+        width: 25%;
+        margin: 2%;
+    }
+
+    .proyecto_links a:hover {
+        cursor: pointer;
+        opacity: 0.8;
+        font-family: "Lexend Deca", sans-serif;
+    }
+
+    .proyecto_links img {
+        width: 60%;
+    }
+
+    .proyecto_description {
+        margin-bottom: 3%;
+        width: 95%;
+    }
+
+    .proyecto_description h3 {
+        font-size: 1.2vw;
+        font-family: "Rajdhani", sans-serif;
+        color: white;
+    }
+
+
+
+    .proyecto_imagen {
+        width: 50%;
+    }
+
+    .proyecto_imagen img {
+        width: 100%;
+        height: 100%;
+        border-radius: 17px 0 0 17px;
+        border-right: 3px solid orange;
+    }
+
+    .proyecto_tecnologies {
+        display: flex;
+    }
+
+    .tecnologia {
+        background-color: orange;
+        width: fit-content;
+        padding: 5px;
+        border: 1px solid;
+        border-radius: 5px;
+        margin-right: 1%;
+    }
+
+    .tecnologia h1 {
+        color: rgb(0, 0, 0);
+        font-size: 1vw;
+        font-family: "Lexend Deca", sans-serif;
+    }
+
+    .tecnologia:hover {
+        cursor: default;
+    }
+</style>
