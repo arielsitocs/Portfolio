@@ -64,8 +64,7 @@ import Enlace from "../img/enlace.png";
         margin-top: 1.5%;
     }
 
-    .proyecto_top
-    {
+    .proyecto_top {
         display: flex;
         align-items: center;
         margin-bottom: 3%;
@@ -98,7 +97,6 @@ import Enlace from "../img/enlace.png";
         border-radius: 5px;
         background-color: rgb(104, 119, 255);
         justify-content: center;
-        /* margin-left: 5%; */
         width: 25%;
         margin: 2%;
     }
@@ -124,17 +122,15 @@ import Enlace from "../img/enlace.png";
         color: white;
     }
 
-
-
     .proyecto_imagen {
         width: 50%;
+        border-right: 3px solid orange;
     }
 
     .proyecto_imagen img {
         width: 100%;
         height: 100%;
         border-radius: 17px 0 0 17px;
-        border-right: 3px solid orange;
     }
 
     .proyecto_tecnologies {
@@ -158,5 +154,42 @@ import Enlace from "../img/enlace.png";
 
     .tecnologia:hover {
         cursor: default;
+    }
+
+    @media (max-width: 768px) {
+        .proyecto {
+            width: 80%;
+            border: 2px solid orange;
+            margin: 2%;
+        }
+
+        .proyecto_content {
+            margin-left: 1.5%;
+        }
+
+        .proyecto_title {
+            width: 68%;
+        }
+
+        .proyecto_title h1 {
+            font-size: 3.3vw;
+        }
+        
+        .proyecto_imagen {
+            border-right: 2px solid orange;
+        }
+
+        .proyecto_description {
+            width: 100%;
+        }
+
+        .proyecto_description h3 
+        {
+            font-size: 2.5vw;
+        }
+
+        .tecnologia h1 {
+            font-size: 1.9vw;
+        }
     }
 </style>
