@@ -1,16 +1,19 @@
 ---
 import "../styles/index.css";
+import "../styles/font.css";
 import fotoAriel from "../img/fotoAriel.png";
 import Contacto from "../components/contact.astro";
 import Tecnologia from "../components/technology.astro";
 import Proyecto from "../components/proyect.astro";
 import contacto1 from "../img/github.png";
 import contacto2 from "../img/linkedin.png";
+import githubw from "../img/githubw.png";
+import linkedinw from "../img/linkedinw.png";
 import Default from "../img/default.png";
 import js from "../img/js.png";
 import ts from "../img/typescript.png";
 import py from "../img/piton.png";
-import cplus from "../img/default.png";
+import cplus from "../img/c-.png";
 import csharp from "../img/c-.png";
 import java from "../img/java.png";
 import astro from "../img/astro.png";
@@ -58,12 +61,12 @@ import ionic from "../img/ionic.png";
 						<div class="pres_contacts">
 							<Contacto
 								link="https://github.com/arielsitocs"
-								icon={contacto1.src}
+								icon={githubw.src}
 								name="GitHub"
 							/>
 							<Contacto
 								link="https://www.linkedin.com/in/ariel-escobar/"
-								icon={contacto2.src}
+								icon={linkedinw.src}
 								name="LinkedIn"
 							/>
 						</div>
@@ -137,7 +140,7 @@ import ionic from "../img/ionic.png";
 						descripcion="Medio"
 					/>
 					<Tecnologia
-						imagen={csharp.src}
+						imagen={Default.src}
 						titulo="C#"
 						descripcion="Medio"
 					/>
@@ -191,23 +194,48 @@ import ionic from "../img/ionic.png";
 						link={""}
 					/>
 					<Proyecto
-					imagen={Default.src}
-					titulo="Cajero Automático"
-					descripcion="Un proyecto más personal, para darme a conocer y poder mostrar mi experiencia y habilidades."
-					tecnologias={["HTML", "CSS", "JS", "ASTRO"]}
-					github={""}
-					link={""}
-				/>						
+						imagen={Default.src}
+						titulo="Cajero Automático"
+						descripcion="Un proyecto más personal, para darme a conocer y poder mostrar mi experiencia y habilidades."
+						tecnologias={["HTML", "CSS", "JS", "ASTRO"]}
+						github={""}
+						link={""}
+					/>
 				</div>
 			</section>
 
 			<section id="contacto">
+					<div class="contacto_title">
+						<h1><span>¿Tienes una idea?</span></h1>
+						<h2>¡Contáctame y hablemos!</h2>
+					</div>
 
+						<form action="submit" class="formulario">
+							<div class="nombre">
+								<h2>Tu Nombre</h2>
+								<input type="text">
+							</div>
+
+							<div class="correo">
+								<h2>Tu Correo</h2>
+								<input type="email">
+							</div>
+
+							<div class="mensaje">
+								<h2>Dejame tu Mensaje</h2>
+								<textarea name="" id="" cols="30" rows="10"></textarea>
+							</div>
+
+							<div class="boton">
+								<button>Enviar</button>
+							</div>
+						</form>
+				</div>
 			</section>
-
-			<footer>
-				<h1>©2024 Ariel Escobar. Todos los derechos reservados.</h1>
-			</footer>
 		</main>
+
+		<footer>
+			<h1>©2024 Ariel Escobar. Todos los derechos reservados.</h1>
+		</footer>
 	</body>
 </html>

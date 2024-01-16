@@ -20,11 +20,14 @@ const {link, icon = "Missing Icon!", name = "Missing Name!"} = Astro.props;
         display: flex;
         align-items: center;
         flex-direction: column;
-        width: 50px;
-        margin: 20%;
+        width: 30%;
+        margin: 5%;
+        padding: 10%;
+        background-color: rgb(31, 31, 31);
+        border-radius: 10px;
     }
 
-    .contact img 
+    .contact img
     {
         border: none;
         width: 100%;
@@ -34,19 +37,30 @@ const {link, icon = "Missing Icon!", name = "Missing Name!"} = Astro.props;
 
     .contact img:hover
     {
-        transform: scale(1.2);
+        transform: scale(1.1);
         cursor: pointer;
-        background-color: orange;
+        /* background-color: orange; */
     }
 
     .contact h3 
     {
         font-family: 'Lexend Deca', sans-serif;
-        font-size: 1vw;
+        font-size: 0.9vw;
+        color: orange;
     }
 
     @media (max-width: 768px)
     {
+        .contact 
+        {
+            padding: 45%;
+            margin: 10%;
+        }
+
+        .contact a {
+        width: 250%;
+    }
+        
         .contact h3 
         {
             font-size: 2.2vw;

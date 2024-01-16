@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&family=Lexend+Deca:wght@300&family=Rajdhani&family=Roboto+Mono:wght@200&family=Rubik&display=swap');
 
 * {
     margin: 0;
@@ -10,22 +9,35 @@ html {
 }
 
 section {
-    border-bottom: 3px solid rgba(0, 0, 0, 0.205);
+    border-bottom: 3px solid rgba(202, 202, 202, 0.205);
+    background-color: black;
 }
 
 /* NAVBAR */
 
+@keyframes nav_down {
+    from {
+      opacity: 0;
+      transform: translateY(-100px); /* Desplazar hacia arriba 20px */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* Sin desplazamiento al final */
+    }
+  }
+
 .nav_bar {
     width: 100%;
     min-height: 10vh;
-    background-color: rgba(179, 179, 179, 0.238);
+    /* background-color: rgba(179, 179, 179, 0.238); */
     display: flex;
     align-items: center;
     padding-bottom: 10px;
     padding-top: 10px;
     position: fixed;
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(2px);
     /* border: px solid black; */
+    animation: nav_down 1s ease-in;
 }
 
 .perfil {
@@ -45,7 +57,7 @@ section {
     margin-left: 1%;
     font-family: 'Lexend Deca', sans-serif;
     font-size: 1.5vw;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 .perfil span {
@@ -61,7 +73,7 @@ section {
 .links a {
     text-decoration: none;
     margin: 1.5%;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-family: 'Kanit', sans-serif;
     font-size: 1.2vw;
     transition: color 0.4s ease, transform 0.4s ease;
@@ -74,6 +86,18 @@ section {
 }
 
 /* INICIO */
+
+@keyframes presentation{
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+      transform: translateX(0);
+    }
+}
 
 #inicio {
     width: 100%;
@@ -88,6 +112,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: presentation 1.5s ease-in;
 }
 
 .pres {
@@ -115,6 +140,7 @@ section {
 .presentacion h1 {
     font-family: 'Lexend Deca', sans-serif;
     font-size: 2vw;
+    color: white;
 }
 
 .presentacion span {
@@ -122,7 +148,7 @@ section {
 }
 
 .presentacion button {
-    background-color: black;
+    background-color:  orange;
     color: white;
     margin-top: 4%;
     width: 40%;
@@ -130,13 +156,13 @@ section {
     border-radius: 100px;
     font-family: 'Lexend Deca', sans-serif;
     font-size: 1.3vw;
-    border: 1px solid black;
-    transition: background 0.4s ease, border 0.4s ease;
+    border: 2px solid orange;
+    transition: background 0.4s ease, border 0.4s ease, opacity 0.4s ease;
 }
 
 .presentacion button:hover {
-    background: orange;
-    border: 1px solid orange;
+    background: rgb(255, 200, 98);
+    border: 2px solid rgb(255, 200, 98);
     cursor: pointer;
 }
 
@@ -167,6 +193,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 20%;
 }
 
 @media (max-width: 768px) {
@@ -354,8 +381,96 @@ section {
     width: 100%;
     height: 100vh;
     max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#contacto h1, h2 {
+    color: white;
+    font-family: 'Lexend Deca', sans-serif;
 }
 
+.contacto_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(31, 31, 31);
+    padding: 25px;
+    border-radius: 10px;
+    /* border: 1px solid orange; */
+    margin-bottom: 1%;
+    width: 35%;
+}
+
+.contacto_title h1 {
+    font-size: 2.2vw;
+    margin-bottom: 2%;
+}
+
+.contacto_title span {
+    color: orange;
+}
+
+.formulario {
+    width: 55%;
+    min-height: fit-content;
+    background-color: rgb(31, 31, 31);
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nombre, .correo, .mensaje, .boton {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1%;
+}
+
+.formulario input {
+    width: 70%;
+    height: 3vh;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 1vw;
+}
+
+.formulario h2 {
+    margin-bottom: 1%;
+}
+
+.formulario textarea {
+    width: 70%;
+    margin-bottom: 3%;
+    border-radius: 5px;
+    font-size: 15px;
+    border: 1px solid white;
+    resize: none;
+}
+
+.formulario button {
+    width: 35%;
+    height: 5vh;
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: orange;
+    color: white;
+    font-size: 1.3vw;
+    border: 1px solid orange;
+}
+
+.formulario button:hover {
+    background: rgb(255, 200, 98);
+    border: 2px solid rgb(255, 200, 98);
+    cursor: pointer;
+}
+    
 /* FOOTER */ 
 
 footer {
