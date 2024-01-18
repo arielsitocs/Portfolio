@@ -1,0 +1,159 @@
+---
+
+---
+
+<div class="contacto_title">
+    <h1><span>¿Tienes una idea?</span></h1>
+    <h2>¡Contáctame y hablemos!</h2>
+</div>
+
+<form action="submit" class="formulario">
+    <div class="nombre">
+        <h2>Tu Nombre</h2>
+        <input type="text" id="nombre" required />
+    </div>
+
+    <div class="correo">
+        <h2>Tu Correo</h2>
+        <input type="email" id="correo" required />
+    </div>
+
+    <div class="mensaje">
+        <h2>Dejame tu Mensaje</h2>
+        <textarea name="" id="mensaje" cols="30" rows="10" required></textarea>
+    </div>
+
+    <div class="boton">
+        <button onclick="checkForm()">Enviar</button>
+    </div>
+</form>
+
+<script></script>
+
+<style>
+    .contacto_title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #6666664d;
+        padding: 25px;
+        border-radius: 10px;
+        /* border: 1px solid orange; */
+        margin-bottom: 1%;
+        width: 35%;
+    }
+
+    .contacto_title h1 {
+        font-size: 2.7vw;
+        margin-bottom: 2%;
+    }
+
+    .contacto_title h2 {
+        font-size: 1.3vw;
+    }
+
+    .contacto_title span {
+        color: orange;
+    }
+
+    .formulario {
+        width: 55vw;
+        min-height: fit-content;
+        background-color: #6666664d;
+        padding: 25px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .nombre,
+    .correo,
+    .mensaje,
+    .boton {
+        width: 85%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 1%;
+    }
+
+    .formulario input {
+        width: 75%;
+        height: 5vh;
+        border-radius: 5px;
+        border: 1px solid white;
+        font-size: 1vw;
+    }
+
+    .formulario h2 {
+        font-size: 1.4vw;
+        margin-bottom: 1%;
+    }
+
+    .formulario textarea {
+        width: 75%;
+        margin-bottom: 3%;
+        border-radius: 5px;
+        font-size: 15px;
+        border: 1px solid white;
+        resize: none;
+    }
+
+    .formulario button {
+        width: 35%;
+        height: 5vh;
+        font-family: "Lexend Deca", sans-serif;
+        background-color: orange;
+        color: white;
+        font-size: 1.3vw;
+        border: 1px solid orange;
+    }
+
+    .formulario button:hover {
+        background: rgb(255, 200, 98);
+        border: 2px solid rgb(255, 200, 98);
+        cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+        .contacto_title {
+            width: 65vw;
+            height: 10vh;
+            margin-bottom: 2.4%;
+        }
+
+        .contacto_title h1 {
+            font-size: 4.7vw;
+        }
+
+        .contacto_title h2 {
+            font-size: 2.5vw;
+        }
+
+        .formulario {
+            width: 85vw;
+            padding: 10px;
+        }
+
+        .formulario h2 {
+            font-size: 3vw;
+        }
+
+        .formulario input {
+            width: 90%;
+        }
+
+        .formulario textarea {
+            width: 90% !important; 
+        }
+
+        .formulario button {
+            width: 40vw;
+            font-size: 3.5vw;
+        }
+    }
+</style>

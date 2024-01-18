@@ -5,16 +5,15 @@ import fotoAriel from "../img/fotoAriel.png";
 import Contacto from "../components/contact.astro";
 import Tecnologia from "../components/technology.astro";
 import Proyecto from "../components/proyect.astro";
-import contacto1 from "../img/github.png";
-import contacto2 from "../img/linkedin.png";
+import Form from "../components/form.astro"
+import linkedin from "../img/linkedin.png";
 import githubw from "../img/githubw.png";
-import linkedinw from "../img/linkedinw.png";
 import Default from "../img/default.png";
+import gmail from "../img/gmail.png"
 import js from "../img/js.png";
 import ts from "../img/typescript.png";
 import py from "../img/piton.png";
 import cplus from "../img/c-.png";
-import csharp from "../img/c-.png";
 import java from "../img/java.png";
 import astro from "../img/astro.png";
 import net from "../img/.net.png";
@@ -42,7 +41,7 @@ import ionic from "../img/ionic.png";
 					<a href="#proyectos">PROYECTOS</a>
 					<a href="#contacto">CONTACTO</a>
 				</div>
-				<div class="mode"></div>
+				<!-- <div class="mode"></div> -->
 			</nav>
 
 			<section id="inicio">
@@ -66,9 +65,13 @@ import ionic from "../img/ionic.png";
 							/>
 							<Contacto
 								link="https://www.linkedin.com/in/ariel-escobar/"
-								icon={linkedinw.src}
+								icon={linkedin.src}
 								name="LinkedIn"
 							/>
+						</div>
+						<div class="pres_correo">
+							<img src={gmail.src} alt="">
+							<h3>arielescobar531@gmail.com</h3>
 						</div>
 					</div>
 				</div>
@@ -205,32 +208,7 @@ import ionic from "../img/ionic.png";
 			</section>
 
 			<section id="contacto">
-					<div class="contacto_title">
-						<h1><span>¿Tienes una idea?</span></h1>
-						<h2>¡Contáctame y hablemos!</h2>
-					</div>
-
-						<form action="submit" class="formulario">
-							<div class="nombre">
-								<h2>Tu Nombre</h2>
-								<input type="text">
-							</div>
-
-							<div class="correo">
-								<h2>Tu Correo</h2>
-								<input type="email">
-							</div>
-
-							<div class="mensaje">
-								<h2>Dejame tu Mensaje</h2>
-								<textarea name="" id="" cols="30" rows="10"></textarea>
-							</div>
-
-							<div class="boton">
-								<button>Enviar</button>
-							</div>
-						</form>
-				</div>
+					<Form/>
 			</section>
 		</main>
 

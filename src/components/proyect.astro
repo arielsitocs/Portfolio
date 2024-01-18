@@ -86,7 +86,7 @@ import Enlace from "../img/enlace.png";
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 30%;
+        width: 7vw;
         height: 100%;
     }
 
@@ -94,10 +94,10 @@ import Enlace from "../img/enlace.png";
         display: flex;
         align-items: center;
         padding: 5px;
-        border-radius: 5px;
+        border-radius: 3px;
         background-color: rgb(104, 119, 255);
         justify-content: center;
-        width: 25%;
+        width: 2vw;
         margin: 2%;
     }
 
@@ -108,7 +108,7 @@ import Enlace from "../img/enlace.png";
     }
 
     .proyecto_links img {
-        width: 70%;
+        width: 1.3vw;
     }
 
     .proyecto_description {
@@ -158,7 +158,7 @@ import Enlace from "../img/enlace.png";
 
     @media (max-width: 768px) {
         .proyecto {
-            width: 80%;
+            width: 85%;
             border: 2px solid orange;
             margin: 2%;
         }
@@ -174,18 +174,31 @@ import Enlace from "../img/enlace.png";
         .proyecto_title h1 {
             font-size: 3.3vw;
         }
-        
-        .proyecto_imagen {
-            border-right: 2px solid orange;
+
+        .proyecto_top {
+            margin-bottom: 1%;
         }
 
-        .proyecto_description {
+        .proyecto_links {
+            width: auto;
+            margin: auto;
+        }
+
+        .proyecto_links a {
+            width: 19px;
+        }
+
+        .proyecto_links img {
             width: 100%;
         }
+        
+        /* .proyecto_description {
+            width: 100%;
+        } */
 
         .proyecto_description h3 
         {
-            font-size: 2.5vw;
+            font-size: 2.6vw;
         }
 
         .tecnologia h1 {

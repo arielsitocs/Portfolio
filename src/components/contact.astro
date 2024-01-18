@@ -1,69 +1,81 @@
 ---
-interface Props
-{
+interface Props {
     link: string;
     icon: any;
     name: string;
 }
 
-const {link, icon = "Missing Icon!", name = "Missing Name!"} = Astro.props;
+const { link, icon = "Missing Icon!", name = "Missing Name!" } = Astro.props;
 ---
 
 <div class="contact">
-    <a href={link}><img src={icon}></a>
+    <a href={link}><img src={icon} /></a>
     <h3>{name}</h3>
 </div>
 
 <style>
-    .contact
-    {
+    .contact {
         display: flex;
         align-items: center;
         flex-direction: column;
-        width: 30%;
-        margin: 5%;
-        padding: 10%;
-        background-color: rgb(31, 31, 31);
+        width: 5.5vw;
+        padding: 1.2vw; 
+        margin: 1vw; 
+        background-color: rgb(19, 19, 19);
+        box-shadow: 3px 3px orange;
         border-radius: 10px;
     }
 
-    .contact img
-    {
+    .contact a {
+        width: 2.7vw;
+        margin-bottom: 0.6vh;
+    }
+
+    .contact img {
         border: none;
         width: 100%;
         max-width: 100%;
-        transition: transform 0.4s ease, margin-bottom 0.4s ease, background 0.4s ease;
+        border-radius: 3px;
+        transition:
+            transform 0.4s ease,
+            margin-bottom 0.4s ease,
+            background 0.4s ease;
     }
 
-    .contact img:hover
-    {
+    .contact img:hover {
         transform: scale(1.1);
         cursor: pointer;
         /* background-color: orange; */
     }
 
-    .contact h3 
-    {
-        font-family: 'Lexend Deca', sans-serif;
+    .contact h3 {
+        font-family: "Lexend Deca", sans-serif;
         font-size: 0.9vw;
-        color: orange;
+        color: white;
     }
 
-    @media (max-width: 768px)
-    {
-        .contact 
-        {
-            padding: 45%;
+    @media (max-width: 768px) {
+        .contact {
+            width: 10vw;
+            padding: 1.4vw;
             margin: 10%;
+            box-shadow: 2px 2px orange;
+        }
+
+        .contact img {
+            width: 8vw;
+            margin-bottom: 8%;
         }
 
         .contact a {
-        width: 250%;
-    }
-        
-        .contact h3 
-        {
-            font-size: 2.2vw;
+            width: 6vw;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+
+        .contact h3 {
+            font-size: 2vw;
         }
     }
 </style>
