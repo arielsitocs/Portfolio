@@ -1,15 +1,35 @@
 ---
 interface Props {
-    link: string;
+    link?: string;
     icon: any;
     name: string;
+    method?: any; // Atributo que establece si el componente tendrá una funcion o no
+    iden?: any; // Atributo que establece el id del componente para distintos usos (funciones, estilos, etc)
 }
 
-const { link, icon = "Missing Icon!", name = "Missing Name!" } = Astro.props;
+const {
+    link,
+    icon = "Missing Icon!",
+    name = "Missing Name!",
+    method, 
+    iden, 
+} = Astro.props;
+
+let correo = "arielescobar531@gmail.com";
+const estado = method;
 ---
 
-<div class="contact">
-    <a href={link}><img src={icon} /></a>
+<script define:vars={{ correo, estado }}>
+    window.copiar = () => { //window Hace que el metodo copiar() sea global, así el elemento puede ejecutar la funcion
+        if (estado === "true") {
+            navigator.clipboard.writeText(correo);
+            console.log(correo);
+        }
+    };
+</script>
+
+<div class="contact" id={iden}>
+    <a href={link} onclick="copiar()"><img src={icon} /></a>
     <h3>{name}</h3>
 </div>
 
@@ -19,8 +39,8 @@ const { link, icon = "Missing Icon!", name = "Missing Name!" } = Astro.props;
         align-items: center;
         flex-direction: column;
         width: 5.5vw;
-        padding: 1.2vw; 
-        margin: 1vw; 
+        padding: 1.2vw;
+        margin: 1vw;
         background-color: rgb(19, 19, 19);
         box-shadow: 3px 3px orange;
         border-radius: 10px;
@@ -71,7 +91,7 @@ const { link, icon = "Missing Icon!", name = "Missing Name!" } = Astro.props;
             width: 6vw;
             display: flex;
             justify-content: center;
-            align-items: center; 
+            align-items: center;
         }
 
         .contact h3 {

@@ -1,0 +1,165 @@
+---
+interface Props {
+    iden: any;
+}
+
+const { iden } = Astro.props;
+
+import menu from "../img/menu-desplegable.png";
+import fotoAriel from "../img/fotoAriel.png";
+---
+
+<script>
+    const menu_icon = document.getElementById("menu_icon");
+    const side_menu = document.getElementById("side_menu");
+
+    menu_icon?.addEventListener("click", function () {
+        if (side_menu?.classList.contains("active")) {
+            side_menu?.classList.remove("active");
+            side_menu?.classList.add("inactive");
+        } else {
+            side_menu?.classList.remove("inactive");
+            side_menu?.classList.add("active");
+        }
+    });
+</script>
+
+<img src={menu.src} alt="" class="menu_image" id="menu_icon" />
+<nav class="side_nav_bar" id="side_menu">
+    <div class="perfil">
+        <img src={fotoAriel.src} alt="" />
+        <h1><span>A</span>riel <span>E</span>scobar</h1>
+    </div>
+    <div class="links">
+        <hr />
+        <a href="#inicio">INICIO</a>
+        <a href="#sobre">SOBRE MÍ</a>
+        <a href="#conocimiento">HABILIDADES</a>
+        <a href="#proyectos">PROYECTOS</a>
+        <a href="#contacto">CONTACTO</a>
+        <hr />
+    </div>
+
+    <!-- <div class="mode"></div> -->
+</nav>
+
+<style>
+    .side_nav_bar {
+        width: 40vw;
+        height: 80vh;
+        display: block;
+        visibility: hidden;
+        align-items: center;
+        background-color: rgb(0, 0, 0);
+        backdrop-filter: blur(100px);
+        padding-top: 5px;
+        position: fixed;
+        flex-direction: column;
+        border-bottom-right-radius: 10px;
+    }
+
+    .perfil {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 20%;
+        margin-top: 10%;
+    }
+
+    .perfil img {
+        width: 50%;
+        border-radius: 100px;
+        border: 1px solid orange;
+        margin-left: 5%;
+    }
+
+    .perfil h1 {
+        margin-top: 5%;
+        font-family: "Lexend Deca", sans-serif;
+        font-size: 2.8vw;
+        color: rgb(255, 255, 255);
+    }
+
+    .perfil span {
+        color: #ffa500;
+    }
+
+    .links {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 50vh;
+        flex-direction: column;
+        margin: 1%;
+    }
+
+    .links a {
+        margin: 2%;
+        color: rgb(255, 255, 255);
+        font-family: "Kanit", sans-serif;
+        font-size: 2.5vw;
+        transition:
+            color 0.4s ease,
+            transform 0.4s ease;
+        height: 100%;
+        width: 70%;
+        padding: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition:
+            background 0.3s ease,
+            box-shadow 0.5s ease;
+    }
+
+    .links a:hover {
+        background-color: rgba(255, 166, 0, 0.784);
+        box-shadow: 2px 2px orange;
+    }
+
+    .links hr {
+        width: 85%;
+        margin: 5%;
+        color: #ffa500;
+    }
+
+    @keyframes side_menu_active {
+        from {
+            opacity: 0;
+            transform: translateX(-100px);
+            visibility: hidden;
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+            visibility: visible;
+        }
+    }
+
+    @keyframes side_menu_inactive {
+        from {
+            opacity: 1;
+            transform: translateX(0);
+            visibility: visible;
+        }
+
+        to {
+            opacity: 0;
+            transform: translateX(-100px);
+            visibility: hidden;
+        }
+    }
+
+    #side_menu.active {
+        animation: side_menu_active 0.3s ease-in;
+        animation-fill-mode: forwards;
+    }
+
+    #side_menu.inactive {
+        animation: side_menu_inactive 0.3s ease-out;
+        animation-fill-mode: forwards;
+    }
+</style>

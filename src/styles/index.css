@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -17,7 +18,55 @@ section {
         display: none !important;
     }
 
+    .menu_image {
+        display: flex !important;
+    }
+
 }
+
+/* Menu */ 
+
+@keyframes side_menu_entry {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes side_menu_out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+}
+
+.menu_image {
+    width: 35px;
+    z-index: 999;
+    /* margin: 2%; */
+    position: fixed;
+    display: none;
+}
+
+#side_menu_active {
+    display: flex;
+    animation: side_menu_entry 0.3s ease-in;
+}
+
+#side_menu_inactive {
+    animation: side_menu_out 0.3s ease-out;
+}
+
+
 
 /* NAVBAR */
 
@@ -25,27 +74,23 @@ section {
     from {
         opacity: 0;
         transform: translateY(-100px);
-        /* Desplazar hacia arriba 20px */
     }
 
     to {
         opacity: 1;
         transform: translateY(0);
-        /* Sin desplazamiento al final */
     }
 }
 
 .nav_bar {
     width: 100%;
-    min-height: 10vh;
-    /* background-color: rgba(179, 179, 179, 0.238); */
+    /* min-height: 0; */
     display: flex;
     align-items: center;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
     padding-top: 10px;
     position: fixed;
     backdrop-filter: blur(2px);
-    /* border: px solid black; */
     animation: nav_down 1s ease-in;
 }
 
@@ -59,7 +104,7 @@ section {
 .perfil img {
     width: 10%;
     border-radius: 100px;
-    border: 2px solid orange;
+    border: 3px solid orange;
 }
 
 .perfil h1 {
@@ -77,21 +122,27 @@ section {
     display: flex;
     align-items: center;
     width: 50%;
+    height: 6vh;
 }
 
 .links a {
-    text-decoration: none;
-    margin: 1.5%;
+    margin: 1%;
     color: rgb(255, 255, 255);
     font-family: 'Kanit', sans-serif;
     font-size: 1.2vw;
     transition: color 0.4s ease, transform 0.4s ease;
+    height: 100%;
+    width: fit-content;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease, box-shadow 0.5s ease;
 }
 
 .links a:hover {
-    color: orange;
-    transform: scale(1.15);
-    text-decoration: underline;
+    background-color: rgba(255, 166, 0, 0.784);
+    box-shadow: 7px 7px orange;
 }
 
 /* INICIO */
@@ -491,3 +542,28 @@ footer h1 {
         font-size: 2.7vw;
     }
 }
+
+/* ALERTAS */ 
+
+@keyframes alert_down {
+    0% {
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#gmail_active {
+    animation: alert_down 3s ease-in;
+}
+

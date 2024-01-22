@@ -5,11 +5,13 @@ import fotoAriel from "../img/fotoAriel.png";
 import Contacto from "../components/contact.astro";
 import Tecnologia from "../components/technology.astro";
 import Proyecto from "../components/proyect.astro";
-import Form from "../components/form.astro"
+import Form from "../components/form.astro";
+import Alerta from "../components/alert.astro";
 import linkedin from "../img/linkedin.png";
 import githubw from "../img/githubw.png";
 import Default from "../img/default.png";
-import gmail from "../img/gmail.png"
+import SideMenu from "../components/side_menu.astro";
+import gmail from "../img/gmail.png";
 import js from "../img/js.png";
 import ts from "../img/typescript.png";
 import py from "../img/piton.png";
@@ -26,9 +28,25 @@ import ionic from "../img/ionic.png";
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Ariel Escobar</title>
+
+		<script>
+			const gmail = document.getElementById("correo");
+			const gmail_alert = document.getElementById("gmail");
+
+			gmail?.addEventListener("click", function () {
+				setTimeout(() => {
+					gmail_alert?.setAttribute("id", "gmail_active");
+				}, 0);
+				gmail_alert?.removeAttribute("id");
+			});
+
+		</script>
 	</head>
 	<body>
 		<main class="main_content">
+			<SideMenu iden="side_menu" />
+			<Alerta texto="Correo copiado!" iden="gmail" />
+			
 			<nav class="nav_bar">
 				<div class="perfil">
 					<img src={fotoAriel.src} alt="" />
@@ -41,6 +59,7 @@ import ionic from "../img/ionic.png";
 					<a href="#proyectos">PROYECTOS</a>
 					<a href="#contacto">CONTACTO</a>
 				</div>
+
 				<!-- <div class="mode"></div> -->
 			</nav>
 
@@ -68,10 +87,14 @@ import ionic from "../img/ionic.png";
 								icon={linkedin.src}
 								name="LinkedIn"
 							/>
-						</div>
-						<div class="pres_correo">
-							<img src={gmail.src} alt="">
-							<h3>arielescobar531@gmail.com</h3>
+							<div>
+								<Contacto
+									icon={gmail.src}
+									name="Gmail"
+									method="true"
+									iden="correo"
+								/>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -208,7 +231,7 @@ import ionic from "../img/ionic.png";
 			</section>
 
 			<section id="contacto">
-					<Form/>
+				<Form />
 			</section>
 		</main>
 

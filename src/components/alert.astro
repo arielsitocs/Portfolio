@@ -1,0 +1,46 @@
+---
+interface Props {
+    texto: string;
+    iden?: any; // Atributo para establecer el id de la alerta y poder aplicar los estilos a la alerta 
+}
+
+const {texto, iden} = Astro.props;
+import '../styles/font.css';
+---
+
+<div class="alert_container" id={iden}>
+    <h1>{texto}</h1>
+</div>
+
+<style>
+
+    .alert_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        margin-top: 6%;
+        z-index: 999;
+        opacity: 0;
+    }
+
+    .alert_container h1 {
+        background-color: gray;
+        background-color: black;
+        border: 3px solid orange;
+        padding: 7px;
+        font-size: 0.9vw;
+        border-radius: 5px;
+        color: white;
+        font-family: 'Lexend Deca', sans-serif;
+    }
+
+    @media(max-width: 768px) {
+
+        .alert_container h1 {
+            font-size: 2.8vw;
+            border: 2px solid orange;
+        }
+    }
+</style>
