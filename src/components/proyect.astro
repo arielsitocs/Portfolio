@@ -51,7 +51,7 @@ import Enlace from "../img/enlace.png";
     .proyecto {
         width: 45%;
         height: 25%;
-        background-color: rgb(0, 0, 0);
+        /* background-color: rgba(1, 0, 43, 0.87); */
         border-radius: 10px;
         display: flex;
         border: 2px solid orange;
@@ -68,10 +68,11 @@ import Enlace from "../img/enlace.png";
         display: flex;
         align-items: center;
         margin-bottom: 3%;
+        width: 100%;
     }
 
     .proyecto_title {
-        width: 100%;
+        width: fit-content;
         display: flex;
         align-items: center;
     }
@@ -86,19 +87,19 @@ import Enlace from "../img/enlace.png";
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 7vw;
-        height: 100%;
+        width: fit-content;
+        margin-left: 2%;
     }
 
     .proyecto_links a {
         display: flex;
         align-items: center;
         padding: 5px;
-        border-radius: 3px;
+        border-radius: 2px;
         background-color: rgb(104, 119, 255);
         justify-content: center;
         width: 2vw;
-        margin: 2%;
+        margin-left: 4px;
     }
 
     .proyecto_links a:hover {
@@ -167,10 +168,6 @@ import Enlace from "../img/enlace.png";
             margin-left: 1.5%;
         }
 
-        .proyecto_title {
-            width: 68%;
-        }
-
         .proyecto_title h1 {
             font-size: 3.3vw;
         }
@@ -179,22 +176,14 @@ import Enlace from "../img/enlace.png";
             margin-bottom: 1%;
         }
 
-        .proyecto_links {
-            width: auto;
-            margin: auto;
-        }
-
         .proyecto_links a {
-            width: 19px;
+           width: 50%;
+           margin-left: 2px;
         }
 
         .proyecto_links img {
-            width: 100%;
+          width: 2vw;
         }
-        
-        /* .proyecto_description {
-            width: 100%;
-        } */
 
         .proyecto_description h3 
         {

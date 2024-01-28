@@ -7,25 +7,28 @@
     <h2>¡Contáctame y hablemos!</h2>
 </div>
 
-<form action="submit" class="formulario">
+<form action="https://formsubmit.co/24b60ba7ba2ccc74c838de11763f196d" method="POST" class="formulario">
     <div class="nombre">
         <h2>Tu Nombre</h2>
-        <input type="text" id="nombre" required />
+        <input type="text" id="nombre" name="nombre" required />
     </div>
 
     <div class="correo">
         <h2>Tu Correo</h2>
-        <input type="email" id="correo" required />
+        <input type="email" id="correo" name="correo" required />
     </div>
 
     <div class="mensaje">
         <h2>Dejame tu Mensaje</h2>
-        <textarea name="" id="mensaje" cols="30" rows="10" required></textarea>
+        <textarea name="mensaje" id="mensaje" cols="30" rows="10" required></textarea>
     </div>
 
     <div class="boton">
-        <button onclick="checkForm()">Enviar</button>
+        <input type="submit" id="enviar"></input>
     </div>
+
+    <input type="hidden" name="_next" value="https://arielelputoamo.netlify.app">
+    <input type="hidden" name="_captcha" value="false">
 </form>
 
 <script></script>
@@ -39,7 +42,6 @@
         background-color: #6666664d;
         padding: 10px;
         border-radius: 10px;
-        /* border: 1px solid orange; */
         margin-bottom: 1%;
         width: 35%;
     }
@@ -103,7 +105,7 @@
         resize: none;
     }
 
-    .formulario button {
+    .formulario #enviar {
         width: 35%;
         height: 5vh;
         font-family: "Lexend Deca", sans-serif;
@@ -113,7 +115,7 @@
         border: 1px solid orange;
     }
 
-    .formulario button:hover {
+    .formulario #enviar:hover {
         background: rgb(255, 200, 98);
         border: 2px solid rgb(255, 200, 98);
         cursor: pointer;
@@ -135,8 +137,9 @@
         }
 
         .formulario {
-            width: 85vw;
-            padding: 10px;
+            width: 95vw;
+            height: fit-content;
+            padding: 5%;
         }
 
         .formulario h2 {
@@ -146,6 +149,7 @@
         .formulario input {
             width: 90%;
             height: 3vh;
+            font-size: 4.5vw;
         }
 
         .formulario textarea {
@@ -154,9 +158,10 @@
             font-size: 12px;
         }
 
-        .formulario button {
-            width: 40vw;
+        .formulario #enviar {
+            width: 35vw;
             font-size: 3.5vw;
+            margin-top: 5%;
         }
     }
 </style>

@@ -1,7 +1,8 @@
 ---
 import "../styles/index.css";
 import "../styles/font.css";
-import fotoAriel from "../img/fotoAriel.png";
+import logoAriel from "../img/logoAriel.png"
+import logoAriel2 from "../img/logoAriel2.png"
 import Contacto from "../components/contact.astro";
 import Tecnologia from "../components/technology.astro";
 import Proyecto from "../components/proyect.astro";
@@ -39,17 +40,16 @@ import ionic from "../img/ionic.png";
 				}, 0);
 				gmail_alert?.removeAttribute("id");
 			});
-
 		</script>
 	</head>
 	<body>
 		<main class="main_content">
 			<SideMenu iden="side_menu" />
 			<Alerta texto="Correo copiado!" iden="gmail" />
-			
+
 			<nav class="nav_bar">
 				<div class="perfil">
-					<img src={fotoAriel.src} alt="" />
+					<img src={logoAriel2.src} alt=""/>
 					<h1><span>A</span>riel <span>E</span>scobar</h1>
 				</div>
 				<div class="links">
@@ -66,7 +66,7 @@ import ionic from "../img/ionic.png";
 			<section id="inicio">
 				<div class="presentacion">
 					<div class="pres_left">
-						<img src={fotoAriel.src} />
+						<img src={logoAriel.src} />
 						<h1>Desarrollador <span>FullStack</span>.</h1>
 						<button>Conoceme más</button>
 						<button>Descargar CV</button>
@@ -87,14 +87,13 @@ import ionic from "../img/ionic.png";
 								icon={linkedin.src}
 								name="LinkedIn"
 							/>
-							<div>
-								<Contacto
-									icon={gmail.src}
-									name="Gmail"
-									method="true"
-									iden="correo"
-								/>
-							</div>
+
+							<Contacto
+								icon={gmail.src}
+								name="Gmail"
+								method="true"
+								iden="correo"
+							/>
 						</div>
 					</div>
 				</div>
